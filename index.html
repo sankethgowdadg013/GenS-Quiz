@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen-S Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="container">
+
+        <!-- LANDING SCREEN -->
+
+        <section id="landing-screen" class="screen active">
+
+            <div class="landing-content">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Gen-S Quiz Logo"
+                    class="main-logo">
+
+                <h1 class="landing-title">
+                    Gen-S Quiz
+                </h1>
+
+                <p class="landing-subtitle">
+                    AI Powered Examination Preparation Platform
+                </p>
+
+                <button
+                    id="get-started-btn"
+                    class="start-btn">
+                    Get Started
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- STREAM SCREEN -->
+
+        <section id="stream-screen" class="screen">
+
+            <div class="header">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Logo"
+                    class="header-logo">
+
+                <h2>Select Stream</h2>
+
+            </div>
+
+            <div
+                id="stream-buttons"
+                class="grid-buttons"></div>
+
+        </section>
+
+        <!-- EXAM SCREEN -->
+
+        <section id="exam-screen" class="screen">
+
+            <div class="header">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Logo"
+                    class="header-logo">
+
+                <h2 id="selected-stream-title">
+                    Select Examination
+                </h2>
+
+            </div>
+
+            <div
+                id="exam-buttons"
+                class="grid-buttons"></div>
+
+            <button
+                id="back-btn"
+                class="action-btn back-btn">
+                Back
+            </button>
+
+        </section>
+
+        <!-- LOADING SCREEN -->
+
+        <section id="loading-screen" class="screen">
+
+            <div class="loading-container">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Logo"
+                    class="loading-logo">
+
+                <h2>
+                    Generating Quiz...
+                </h2>
+
+                <p id="loading-text">
+                    Preparing Questions
+                </p>
+
+                <div class="loader"></div>
+
+            </div>
+
+        </section>
+
+        <!-- QUIZ SCREEN -->
+
+        <section id="quiz-screen" class="screen">
+
+            <div class="header">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Logo"
+                    class="header-logo">
+
+            </div>
+
+            <div class="quiz-top">
+
+                <div>
+
+                    <div id="exam-name">
+                        KCET
+                    </div>
+
+                    <div id="question-counter">
+                        Question 1 / 15
+                    </div>
+
+                </div>
+
+                <div id="score-display">
+                    Score : 0
+                </div>
+
+            </div>
+
+            <div class="timer-wrapper">
+
+                <div id="timer-progress"></div>
+
+            </div>
+
+            <div id="timer">
+                30s
+            </div>
+
+            <div class="question-card">
+
+                <h2 id="question">
+                    Loading Question...
+                </h2>
+
+            </div>
+
+            <div
+                id="answer-buttons"
+                class="answer-grid"></div>
+
+            <div class="action-row">
+
+                <button id="explain-btn">
+                    Explanation
+                </button>
+
+                <button id="skip-btn">
+                    Skip
+                </button>
+
+                <button id="next-btn">
+                    Next
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- RESULT SCREEN -->
+
+        <section id="result-screen" class="screen">
+
+            <div class="result-container">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Logo"
+                    class="result-logo">
+
+                <h1>
+                    Quiz Completed
+                </h1>
+
+                <h2 id="result-exam">
+                    KCET
+                </h2>
+
+                <div class="result-card">
+
+                    <div class="result-item">
+                        <span>Score</span>
+                        <strong id="final-score">
+                            0 / 15
+                        </strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span>Accuracy</span>
+                        <strong id="accuracy">
+                            0%
+                        </strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span>Correct</span>
+                        <strong id="correct-count">
+                            0
+                        </strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span>Wrong</span>
+                        <strong id="wrong-count">
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+                <div class="action-row">
+
+                    <button id="review-btn">
+                        Review Answers
+                    </button>
+
+                    <button id="restart-btn">
+                        Play Again
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- EXPLANATION MODAL -->
+
+    <div
+        id="modal"
+        class="modal">
+
+        <div class="modal-content">
+
+            <h2>
+                AI Explanation
+            </h2>
+
+            <div id="explanation-loading">
+
+                <div class="loader"></div>
+
+                <p>
+                    Generating Explanation...
+                </p>
+
+            </div>
+
+            <div id="explanation-container">
+
+                <p id="explanation-text"></p>
+
+                <div id="reference-section">
+
+                    <h3>
+                        Recommended Resources
+                    </h3>
+
+                    <div id="reference-links"></div>
+
+                </div>
+
+            </div>
+
+            <button id="close-modal">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

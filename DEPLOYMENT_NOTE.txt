@@ -1,0 +1,1 @@
+Frontend moved to root for GitHub Pages. Update script.js API URL from localhost:8001 to deployed backend URL.
