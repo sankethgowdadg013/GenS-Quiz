@@ -218,7 +218,7 @@ async function generateQuiz(exam) {
 
         const response =
         await fetch(
-            "http://localhost:8001/api/generate-quiz",
+            "http://https://gens-quiz-backend.onrender.com/api/generate-quiz",
             {
                 method: "POST",
 
